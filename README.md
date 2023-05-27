@@ -10,4 +10,4 @@
 > 
 > Website Link: *[https://algo-filipino.github.io/rovic-music-player/](https://algo-filipino.github.io/rovic-music-player/)*
 
-[![Music Player App](images/music-player-app-ss.PNG)](https://algo-filipino.github.io/rovic-music-player/) 
+[![Music Player App](music-player/images/music-player-app-ss.PNG)](https://algo-filipino.github.io/rovic-music-player/) 
