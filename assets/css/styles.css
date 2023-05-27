@@ -15,6 +15,9 @@
   --font-medium: 500;
   --font-semi-bold: 600;
   --z-fixed: 100;
+  --box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+  --border-radius: 50px;
+  --border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 @media screen and (min-width: 1024px) {
@@ -523,6 +526,127 @@ img {
 @media screen and (max-width: 550px) {
   .carousel .images img{
     width: 100%;
+  }
+}
+
+/* ========== SONGS PAGE ==========*/
+
+.ui-cards {
+  display: grid;  
+  grid-template-columns: repeat(3, 1fr);  
+  grid-template-rows: 1fr;
+  margin: 0px 5rem;
+}
+
+.cards {
+  box-sizing: border-box;
+  background-color: var(--white);
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  padding: 10px;
+  margin-left: 2rem;
+  margin-top: 10px;
+}
+
+.cards:hover {
+  background-color: var(--secondary);
+  color: var(--white);
+  box-shadow: none;
+}
+
+.cards:hover .songs-images {
+  transform: scale(1.5);
+  border-radius: 50px 50px 0px 0px;
+}
+
+.cards:hover .songs-btn {
+  background-color: #eca90b;
+}
+
+.pics {
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50px 50px 0px 0px;
+}
+
+.pics .songs-images {
+  width: 100%;
+  height: 300px;
+  display: block;
+  border-radius: 50px 50px 0px 0px;
+  transition: transform .5s ease;
+}
+
+.songs-title {
+  text-align: center;
+  margin: 20px 0px;
+  font-size: 2rem;
+}
+
+.songs-text {
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 1.5rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.songs-btn {
+  background-color: var(--accent);
+  border-radius: 100px;
+  border: none;
+  margin: 20px 0px;
+  width: 224px;
+  height: 74px;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+@media (max-width: 970px) {
+  .ui-cards {
+      grid-template-columns: 1fr;
+      margin: 0px 2rem;
+  }
+  .cards {
+      margin: 2rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .ui-cards {
+      grid-template-columns: 1fr;
+      margin: 0px 2rem;
+  }
+  .cards {
+      margin: 2rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .ui-cards {
+      grid-template-columns: 1fr;
+      margin: 0px 1rem;
+  }
+  .cards {
+      margin: 1rem 0;
+  }
+  .songs-title {
+      font-size: 1.5rem;
+  }
+  .songs-text {
+      margin: 0 0.5rem;
+      font-size: 1rem;
+  }
+  .songs-btn {
+      margin: 10px 0px;
+      font-size: 1rem;
+      width: 180px;
+      height: 60px;
   }
 }
 
